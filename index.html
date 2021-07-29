@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allen's Ithaka</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 22px;
+            background-color: #fdf6e3  ;
+            line-height: 1.5em;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 10% 35% 40% 15%;
+            grid-column-gap: 20px;
+            grid-row-gap: 50px;
+            align-items: center;
+            justify-items: left;
+        }
+        .header{
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            justify-self: center;
+        }
+        .poemtitle {
+            grid-column-start: 2;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            align-self: end;
+            margin-bottom: -50px;
+        }
+        .left {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            margin-bottom: 15px;
+        }
+        .right {
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+        .one {
+            grid-row-start: 3;
+        }
+        .two {
+            grid-row-start: 4;
+        }
+        .three {
+            grid-row-start: 5;
+        }
+        .four {
+            grid-row-start: 6;
+        }
+        .five {
+            grid-row-start: 7;
+        }
+        .six {
+            grid-row-start: 8;
+        }
+
+        .title {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+        }
+        .attr {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 16px;
+        }
+        .source{
+            background-color: #839496;
+            background-color: rgba(131, 148, 150, 0.3);
+            padding: 2px;
+            border-radius: 5px;
+        }
+        .source:hover {
+            background-color: rgba(203, 75, 22, 0.7);
+        }
+        .highlight {
+            background-color: rgba(203, 75, 22, 0.7);
+        }
+        .art {
+            padding: 3px;
+            border-radius: 25px;
+        }
+        .art:hover {
+            background-color: rgba(203, 75, 22, 0.7);
+        }
+    </style>
+    <script type="text/javascript">
+        function highlight(id) {
+            document.getElementById(id).classList.add('highlight');
+        }
+        function unhighlight(id) {
+            if (id === 'all'){
+                unhighlight('source_one')
+                unhighlight('art_one')
+                unhighlight('source_two')
+                unhighlight('art_two')
+                unhighlight('source_three')
+                unhighlight('art_three')
+                unhighlight('source_four')
+                unhighlight('art_four')
+                unhighlight('source_five')
+                unhighlight('art_five')
+                unhighlight('source_six')
+                unhighlight('art_six')
+            }
+            else if ( document.getElementById(id).classList.contains('highlight') ) {
+                document.getElementById(id).classList.remove('highlight'); 
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="header.png" width="700px"><br>
+            <center><span class="attr">Made with Typro, CLIP, &nbspVQGAN, and ❤️.</span></center>
+        </div>
+        <div class="poemtitle">
+            <span class="title">Ithaka</span><br>
+            <span class="attr">BY C.P. CAVAFY</span>
+        </div>
+        <div class="left one">
+            As you set out for Ithaka <br>
+            <span class="source" id="source_one"
+                onmouseover="highlight('art_one')"
+                onmouseout="unhighlight('art_one')"
+            >hope your road is a long one, <br>
+            full of adventure, full of discovery.</span> <br>
+            Laistrygonians, Cyclops, <br>
+            angry Poseidon—don’t be afraid of them: <br>
+            you’ll never find things like that on your way <br>
+            as long as you keep your thoughts raised high,<br>
+            as long as a rare excitement<br>
+            stirs your spirit and your body.<br>
+        </div>
+        <div class="left two">
+            <span class="source" id="source_two"
+                onmouseover="highlight('art_two')"
+                onmouseleave="unhighlight('art_two')">
+            Laistrygonians, Cyclops,<br>
+            wild Poseidon—you won’t encounter them</span><br>
+            unless you bring them along inside your soul,<br>
+            unless your soul sets them up in front of you.<br>
+            <br>
+        </div>
+        <div class="left three">
+            Hope your road is a long one.<br>
+            <span class="source" id="source_three"
+                onmouseover="highlight('art_three')"
+                onmouseleave="unhighlight('art_three')"
+            >May there be many summer mornings when,<br>
+            with what pleasure, what joy,<br>
+            you enter harbors you’re seeing for the first time;</span><br>
+            may you stop at Phoenician trading stations<br>
+            to buy fine things,<br>
+            mother of pearl and coral, amber and ebony,<br>
+            sensual perfume of every kind—<br>
+            as many sensual perfumes as you can;<br>
+            <span class="source" id="source_four"
+                onmouseover="highlight('art_four')"
+                onmouseleave="unhighlight('art_four')">
+            and may you visit many Egyptian cities<br>
+            to learn and go on learning from their scholars.</span><br>
+            <br>
+        </div>
+
+        <div class="left four">
+            Keep Ithaka always in your mind.<br>
+            Arriving there is what you’re destined for.<br>
+            <span class="source" id="source_five"
+                onmouseover="highlight('art_five')"
+                onmouseout="unhighlight('art_five')"
+            >But don’t hurry the journey at all.<br>
+            Better if it lasts for years,<br>
+            so you’re old by the time you reach the island,</span><br>
+            wealthy with all you’ve gained on the way,<br>
+            not expecting Ithaka to make you rich.<br>
+            <br>
+        </div>
+        <div class="left five">
+            Ithaka gave you the marvelous journey.<br>
+            Without her you wouldn't have set out.<br>
+            She has nothing left to give you now.<br>
+            <br>
+            And if you find her poor, Ithaka won’t have fooled you.<br>
+            <span class="source" id="source_six"
+                onmouseover="highlight('art_six')"
+                onmouseout="unhighlight('art_six')"
+            >Wise as you will have become, so full of experience,<br>
+            you’ll have understood by then what these Ithakas mean.</span><br>
+        </div>
+        <div class="right one">
+            <img class="art" src="one.png" id="art_one"
+                onmouseover="highlight('source_one')"
+                onmouseleave="unhighlight('source_one')">
+        </div>
+        <div class="right two">
+            <img class="art" src="two.png" id="art_two"
+                onmouseover="highlight('source_two')"
+                onmouseleave="unhighlight('source_two')"
+                >
+        </div>
+        <div class="right three">
+            <img src="three.png" class="art" id="art_three"
+                onmouseover="highlight('source_three')"
+                onmouseleave="unhighlight('source_three')"
+            >
+            <img src="four.png" class="art" id="art_four"
+                onmouseover="highlight('source_four')"
+                onmouseleave="unhighlight('source_four')"
+            >
+        </div>
+        <div class="right four">
+            <img src="five.png" class="art" id="art_five"
+            onmouseover="highlight('source_five')"
+            onmouseout="unhighlight('source_five')"
+            >
+        </div>
+        <div class="right five">
+            <img src="six.png" class="art" id="art_six"
+                onmouseover="highlight('source_six')"
+                onmouseout="unhighlight('source_six')"
+            >
+        </div>
+
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(window).scroll(function(){
+        let wintop = $(window).scrollTop()
+        let docheight = $(document).height()
+        let winheight = $(window).height()
+        let scrolled = (wintop/(docheight-winheight))
+
+        if (scrolled > 0.01 & scrolled < 0.13 ) {
+            unhighlight('all')
+            highlight('art_one')
+            highlight('source_one')
+        } else if  (scrolled > 0.18 & scrolled < 0.38) {
+            unhighlight('all')
+            highlight('art_two')
+            highlight('source_two')
+        } else if (scrolled > 0.38 & scrolled < 0.58) {
+            unhighlight('all')
+            highlight('art_three')
+            highlight('source_three')
+        } else if (scrolled > 0.58 & scrolled < 0.74 ) {
+            unhighlight('all')
+            highlight('art_four')
+            highlight('source_four')
+        } else if (scrolled > 0.74 & scrolled < 0.9) {
+            unhighlight('all')
+            highlight('art_five')
+            highlight('source_five')
+        } else if (scrolled > 0.9) {
+            unhighlight('all')
+            highlight('art_six')
+            highlight('source_six')
+        }
+
+        console.log('wintop='+wintop);
+        console.log('docheight='+docheight);
+        console.log('winheight='+winheight);
+        console.log(wintop+'=='+(docheight-winheight));
+        console.log(wintop==(docheight-winheight));
+        console.log('%scrolled='+(wintop/(docheight-winheight))*100);
+
+    });
+</script>
+</html>
